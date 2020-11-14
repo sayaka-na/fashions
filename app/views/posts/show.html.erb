@@ -1,0 +1,74 @@
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        投稿詳細
+      </h1>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-7">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <%= attachment_image_tag @post, :image %>
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4"><%= @post.title %></p>
+                <% if current_user.like?(@post) %>
+                  <%= link_to post_favorites_path(@post), method: :delete do %>
+                    <i class="fas fa-heart"></i>
+                  <% end %>
+                <% else %>
+                  <%= link_to post_favorites_path(@post), method: :post do %>
+                    <i class="far fa-heart"></i>
+                  <% end %>
+                <% end %>
+                <%= @post.favorites.count %>
+              </div>
+            </div>
+            <div class="content">
+              <table class="table is-narrow">
+                <tr>
+                  <th>作り方</th>
+                </tr>
+                <tr>
+                  <td><%= simple_format @post.content %></td>
+                </tr>
+              </table>
+              <% if @post.user.id == current_user.id %>
+                <%= link_to "編集画面へ", edit_post_path(@post), class: "button is-success" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-4">
+        <article class="panel is-dark">
+          <p class="panel-heading">
+             <%= @post.user.name %>
+          </p>
+          <div class="panel-block">
+            <p class="control">
+              <%= @post.user.profile %>
+            </p>
+          </div>
+          <%= link_to user_path(@post.user), class: "panel-block" do %>
+            <span class="panel-icon">
+              <i class="fas fa-user" aria-hidden="true"></i>
+            </span>
+            <%= @post.user.name %> さんのページへ
+          <% end %>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

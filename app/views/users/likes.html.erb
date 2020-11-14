@@ -1,0 +1,15 @@
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        いいね一覧
+      </h1>
+    </div>
+  </div>
+</section>
+
+<%= render 'posts/posts', posts: @likes %>
+
+<div class="paginate">
+<%= paginate @likes %>
+</div>
