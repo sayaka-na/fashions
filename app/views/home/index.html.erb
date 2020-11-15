@@ -9,11 +9,12 @@
 
       <div class="columns is-centered">
         <div class="column is-5">
+          <% unless logged_in? %>
           <%= link_to "新規登録", signup_path, class: "button is-rounded is-fullwidth" %>
           <br>
           <%= link_to "ログイン", login_path, class: "button is-rounded is-dark is-fullwidth" %>
           <br>
-          
+          <% end %>
         </div>
       </div>
     </div>
