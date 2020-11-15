@@ -7,7 +7,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   if Rails.env.production?
     include Cloudinary::CarrierWave
     
-    process :convert => ‘png’
+    process :convert => 'png'
 
     #タグの設定。アップされた画像はcloudinaryのファイルでタグがつけられ、（例で言えばpost_picture）検索する際に役立つ。
      process :tags => ['post_picture']
