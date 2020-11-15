@@ -6,6 +6,19 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Choose what kind of storage to use for this uploader:
   if Rails.env.production?
     include Cloudinary::CarrierWave
+    
+    process :convert => ‘png’
+
+    #タグの設定。アップされた画像はcloudinaryのファイルでタグがつけられ、（例で言えばpost_picture）検索する際に役立つ。
+     process :tags => ['post_picture']
+    
+     version :standard do
+       process :resize_to_fill => [300, 300, :north]
+     end
+    
+     version :thumbnail do
+       resize_to_fit(100, 100)
+     end
   else
     storage :file
   end
