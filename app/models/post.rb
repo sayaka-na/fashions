@@ -10,4 +10,6 @@ class Post < ApplicationRecord
     validates :content
     validates :image
   end
+  
+  
 end

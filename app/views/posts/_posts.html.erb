@@ -26,17 +26,22 @@
               <div class="content">
                 <time><%= post.updated_at.strftime("%Y-%m-%d %H:%M") %></time>更新
               </div>
+              
               <div class="favorites">
-                <% if current_user.like?(post) %>
-                  <%= link_to post_favorites_path(post), method: :delete do %>
-                    <i class="fas fa-heart"></i>
+                <% if logged_in? %>
+                  <% if current_user.like?(post) %>
+                    <%= link_to post_favorites_path(post), method: :delete do %>
+                      <i class="fas fa-heart"></i>
+                    <% end %>
+                  <% else %>
+                    <%= link_to post_favorites_path(post), method: :post do %>
+                      <i class="far fa-heart"></i>
+                    <% end %>
                   <% end %>
                 <% else %>
-                  <%= link_to post_favorites_path(post), method: :post do %>
-                    <i class="far fa-heart"></i>
-                  <% end %>
+                  <i class="far fa-heart"></i>
+                  <%= post.favorites.count %>
                 <% end %>
-                <%= post.favorites.count %>
               </div>
             </div>
           </div>
