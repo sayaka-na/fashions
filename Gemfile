@@ -71,3 +71,5 @@ end
 gem 'mini_magick'
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.3', '>= 1.3.1'
+
+

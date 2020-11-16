@@ -7,16 +7,16 @@
             <div class="card-image">
               <figure class="image is-4by3">
                 <%= link_to post_path(post) do %>
-                  <%= image_tag post.image.url %>
+                  <%= image_tag post.image.to_s %> 
                 <% end %>
               </figure>
             </div>
             <div class="card-content">
               <div class="media">
                 <div class="media-left">
-                  <figure class="image is-48x48">
-                    <% if post.user.image? %>
-                      <%= image_tag post.user.image.url %>
+                  <figure class="image is-32x32">
+                    <% if post.user.profile_image? %>
+                      <%= image_tag post.user.profile_image.to_s, :style => "border-radius: 50%;" %>
                     <% else %>
                       <%= image_tag "no-profile-image.png" %>
                     <% end %>

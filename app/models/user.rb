@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :likes, through: :favorites, source: :post
 
-  mount_uploader :image, ImageUploader
+  mount_uploader :profile_image, ProfileImageUploader
   
   validates :name, presence: true
   

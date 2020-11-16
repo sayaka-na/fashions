@@ -11,11 +11,11 @@
 <section class="section">
   <div class="container">
     <div class="columns is-centered">
-      <div class="column is-7">
+      <div class="column is-4">
         <div class="card">
           <div class="card-image">
             <figure class="image is-4by3">
-              <%= image_tag @post.image.url if @post.image? %>
+              <%= image_tag @post.image.to_s if @post.image? %>
             </figure>
           </div>
           <div class="card-content">
