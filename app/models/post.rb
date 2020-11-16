@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  attachment :image
+  
   belongs_to :user
   has_many :favorites, dependent: :destroy
   
@@ -11,5 +11,5 @@ class Post < ApplicationRecord
     validates :image
   end
   
-  
+  mount_uploader :image, ImageUploader
 end

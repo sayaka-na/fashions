@@ -10,7 +10,8 @@ class User < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :likes, through: :favorites, source: :post
 
-  attachment :profile_image
+  mount_uploader :image, ImageUploader
+  
   validates :name, presence: true
   
   def favorite(post)

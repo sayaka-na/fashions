@@ -30,8 +30,8 @@
           </div>
 
           <div class="field">
-            <%= f.label :profile_image, "プロフィール画像", class: "label" %>
-            <%= f.attachment_field :profile_image, class: "input" %>
+            <%= f.label :image, "プロフィール画像", class: "label" %>
+            <%= f.file_field :image, class: "input" %>
           </div>
 
           <%= f.submit "更新", class: "button is-narmal is-success is-outlined" %>
