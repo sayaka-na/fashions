@@ -18,38 +18,38 @@
 
  
  body {
-	height: 1000px;
-	margin: 0px;
-	padding-top: 60px;
-	background-image: url(main.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-	overflow: scroll;
+  height: 1000px;
+  margin: 0px;
+  padding-top: 60px;
+  background-image: url(main.jpg);
+  background-repeat: no-repeat;
+ background-size: cover;
+  background-attachment: fixed;
+  overflow: scroll;
 }
 
 li.nav-item {
-	margin-right: 20px;
+  margin-right: 20px;
 }
 h1 {
-	font-style: italic;
+  font-style: italic;
 }
 .paginate {
-	display: inline-block;
-	padding: 0;
-	margin: 0;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
 }
 ul.dropdown-menu {
   background-color: #C0C0C0;
 }
 
 .style_image {
-	object-fit: contain;
-	background-color: #eee;
+  object-fit: contain;
+  background-color: #eee;
 }
 .profile_image {
-	border-radius: 50%;
-	object-fit: fill;
+  border-radius: 50%;
+  object-fit: fill;
   border: 2px solid #eee;
 }
 
@@ -71,6 +71,6 @@ ul.dropdown-menu {
   animation   : scrollAnime 4s linear infinite;
 }
 @keyframes scrollAnime{
-    0% { transform: translateX(0)}
+  0% { transform: translateX(0)}
   100% { transform: translateX(-100%)}
 }

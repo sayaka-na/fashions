@@ -59,9 +59,9 @@
         <div class="column is-4">
           <div class="card">
             <div class="card-image">
-              <figure class="image">
+              <figure class="image is-4by3">
                 <%= link_to post_path(post) do %>
-                    <%= image_tag post.image.to_s, :class => "style_image" if post.image? %>
+                  <%= image_tag post.image.to_s, :class => "style_image" %> 
                 <% end %>
               </figure>
             </div>
