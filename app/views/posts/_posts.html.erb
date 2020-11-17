@@ -7,7 +7,7 @@
             <div class="card-image">
               <figure class="image is-4by3">
                 <%= link_to post_path(post) do %>
-                  <%= image_tag post.image.to_s, :class => "style_image" %> 
+                  <%= image_tag post.image.to_s, :class => "style_image", :alt => '投稿画像' %> 
                 <% end %>
               </figure>
             </div>
@@ -16,9 +16,9 @@
                 <div class="media-left">
                   <figure class="image is-32x32">
                     <% if post.user.profile_image? %>
-                      <%= image_tag post.user.profile_image.to_s, :class => "profile_image" %>
+                      <%= image_tag post.user.profile_image.to_s, :class => "profile_image", :alt => 'プロフィール画像' %>
                     <% else %>
-                      <%= image_tag "no-profile-image.png", :class => "profile_image" %>
+                      <%= image_tag "no-profile-image.png", :class => "profile_image", :alt => 'プロフィール画像' %>
                     <% end %>
                   </figure>
                 </div>
