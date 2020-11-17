@@ -15,7 +15,7 @@
         <div class="card">
           <div class="card-image">
             <figure class="image is-4by3">
-              <%= image_tag @post.image.to_s if @post.image? %>
+              <%= image_tag @post.image.to_s, :class => "style_image" if @post.image? %>
             </figure>
           </div>
           <div class="card-content">

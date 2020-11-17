@@ -39,13 +39,16 @@ ul.dropdown-menu {
   background-color: #C0C0C0;
 }
 
-.image img {
+.style_image {
 	object-fit: contain;
 	background-color: #eee;
 }
-.profile_image img {
-	object-fit: cover;
+.profile_image {
+	border-radius: 50%;
+	object-fit: fill;
+  border: 2px solid #eee;
 }
+
 
 .scroll {
   margin     : auto;

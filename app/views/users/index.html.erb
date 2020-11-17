@@ -16,12 +16,12 @@
           <div class="card">
             <div class="card-content">
               <div class="card-image">
-                <figure class="image is-4by3">
+                <figure class="image is-square">
                   <%= link_to user_path(user) do %>
                     <% if user.profile_image? %>
-                      <%= image_tag user.profile_image.to_s, :style => "border-radius: 50%;" %>
+                      <%= image_tag user.profile_image.to_s, :class => "profile_image" %>
                     <% else %>
-                      <%= image_tag "no-profile-image.png", :style => "border-radius: 50%;" %>
+                      <%= image_tag "no-profile-image.png", :class => "profile_image" %>
                     <% end %>
                   <% end %>
                 </figure>
