@@ -19,7 +19,7 @@
               <li class="dropdown-item"><%= link_to 'マイページ', user_path(current_user) %></li>
               <li class="dropdown-item"><%= link_to 'いいね一覧', likes_user_path(current_user) %></li>
               <li class="dropdown-item"><%= link_to '新規投稿', new_post_path %></li>
-              <div class="dropdown-divider"></div>
+              <li class="dropdown-divider"></li>
               <li class="dropdown-item"><%= link_to 'Logout', logout_path, method: :delete %></li>
             </ul>
           </div>
