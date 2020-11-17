@@ -18,17 +18,17 @@
             <%= f.label :title, "タイトル", class: "label" %>
             <%= f.text_field :title, class: "input" %>
           </div>
-
+          
           <div class="field">
             <%= f.label :content, "内容", class: "label" %>
             <%= f.text_area :content, class: "textarea" %>
           </div>
-
+          
           <div class="field">
             <%= f.label :image, "写真", class: "label" %>
             <%= f.file_field :image, class: "input" %>
           </div>
-
+          
           <%= f.submit '投稿', class: "button is-normal is-info is-outlined" %>
         <% end %>
       </div>

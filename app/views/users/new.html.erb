@@ -14,7 +14,7 @@
       <div class="column is-5">
         <%= form_with(model: @user, local: true) do |f| %>
           <%= render 'layouts/error_messages', model: f.object %>
-
+          
         <div class="field">
           <%= f.label :name, class: "label" %>
           <p class="control has-icons-left">
@@ -24,7 +24,7 @@
             </span>
           </p>
         </div>
-
+        
         <div class="field">
           <%= f.label :email, class: "label" %>
           <p class="control has-icons-left">
@@ -34,7 +34,7 @@
             </span>
           </p>
         </div>
-
+        
         <div class="field">
           <%= f.label :password, class: "label" %>        
           <p class="control has-icons-left">
@@ -44,7 +44,7 @@
             </span>
           </p>
         </div>
-
+        
         <div class="field">
           <%= f.label :password_confirmation, class: "label" %>
           <p class="control has-icons-left">
@@ -54,12 +54,12 @@
             </span>
           </p>
         </div>
-
+        
         <div class="actions">
           <%= f.submit "登録", class: "button is-normal is-dark is-outlined" %>
         </div>
         <% end %>
-
+        
         
       </div>
     </div>

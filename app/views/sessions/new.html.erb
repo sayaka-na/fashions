@@ -12,7 +12,7 @@
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-5">
-
+        
         <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
           
           <div class="field">
@@ -24,7 +24,7 @@
               </span>
             </p>
           </div>
-
+          
           <div class="field">
             <%= f.label :password, class: "label" %>
             <p class="control has-icons-left">
@@ -34,12 +34,12 @@
               </span>
             </p>
           </div>
-
+          
           <div class="actions">
             <%= f.submit "ログイン", class: "button is-normal is-dark is-outlined" %>
           </div>
         <% end %>
-
+        
         
       </div>
     </div>
