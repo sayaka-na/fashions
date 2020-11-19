@@ -2,14 +2,14 @@
   <div class="hero-body">
     <div class="container">
       <h1 class="title">
-        ユーザ一覧
+        フォロー一覧
       </h1>
     </div>
   </div>
 </section>
 
-<%= render 'users', users: @users %>
+<%= render 'users', users: @followings %>
 
 <div class="paginate">
-<%= paginate @users %>
+<%= paginate @followings %>
 </div>

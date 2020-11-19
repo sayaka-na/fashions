@@ -2,7 +2,7 @@
   <div class="hero-body">
     <div class="container">
       <h1 class="title">
-        マイページ
+        ユーザページ
       </h1>
     </div>
   </div>
@@ -12,6 +12,7 @@
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
+        
         <div class="columns is-centered">
           <div class="column is-2">
             <figure class="image is-square"  style="margin-left: auto; margin-right: auto;">
@@ -34,6 +35,10 @@
                 </td>
                 <td>
                     <%= link_to "編集", edit_user_path(@user), class: "button is-success" %>
+                </td>
+                <% else %>
+                <td class="is-size-5 is-pulled-right">
+                  <%= render 'relationships/follow_button', user: @user %>
                 </td>
                 <% end %>
               </tr>
