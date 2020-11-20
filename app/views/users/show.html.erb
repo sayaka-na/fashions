@@ -11,7 +11,7 @@
 <section class="section">
   <div class="container">
     <div class="columns is-centered">
-      <div class="column is-8">
+      <div class="column is-mobile">
         
         <div class="columns is-centered">
           <div class="column is-2">
@@ -23,8 +23,8 @@
               <% end %>
             </figure>
           </div>
-          <div class="column is-8">
-            <table class="table is-fullwidth">
+           <div class="column is-one-third">
+            <table class="table">
               <tr>
                 <td class="is-size-4">
                   <strong><%= @user.name %></strong>
@@ -34,23 +34,22 @@
                   <%= @user.email %>
                 </td>
                 <td>
+                  <div class="text-right">
                     <%= link_to "編集", edit_user_path(@user), class: "button is-success" %>
+                  </div>
                 </td>
                 <% else %>
-                <td class="is-size-5 is-pulled-right">
-                  <%= render 'relationships/follow_button', user: @user %>
+                <td>
+                  <div class="text-right">
+                    <%= render 'relationships/follow_button', user: @user %>
+                  </div>
                 </td>
                 <% end %>
-              </tr>
             </table>
-            <table class="table is-fullwidth">
-              <tr>
-                <td>
-                  <%= @user.profile %>
-                </td>
-              </tr>
-            </table>
-          </div>
+                <div class="text-break" style="width: 26rem;">
+                    <%= @user.profile %>
+                </div>
+           </div>
         </div>
       </div>
     </div>
