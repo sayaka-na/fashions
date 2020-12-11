@@ -63,7 +63,9 @@ ul.dropdown-menu {
 	overflow-wrap: break-word;
 }
 
-
+td {
+	white-space: nowrap;
+}
 .scroll {
   margin     : auto;
   width      : 50%;
